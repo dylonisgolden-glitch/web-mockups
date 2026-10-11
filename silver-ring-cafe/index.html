@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver Ring Cafe | Cuban Sandwiches in Riverview, Florida</title>
+<style>
+  :root { --red:#b3262c; --ink:#1c1715; --cream:#f8f0e0; --paper:#fffaf0; --gold:#d6a43a; --line:#e6d9bd; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family: Georgia, "Times New Roman", serif; background:var(--cream); color:var(--ink); line-height:1.65; }
+  .note { background:#fff3c4; color:#5b4a00; text-align:center; font:.8rem system-ui, sans-serif; padding:8px; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:16px 6vw; background:var(--ink); color:var(--cream); position:sticky; top:0; z-index:5; border-bottom:4px solid var(--red); }
+  .logo { font-size:1.35rem; letter-spacing:.06em; text-transform:uppercase; }
+  .logo b { color:var(--gold); font-weight:400; }
+  .logo small { display:block; font:.65rem system-ui, sans-serif; letter-spacing:.22em; opacity:.7; }
+  nav a { color:var(--cream); text-decoration:none; margin-left:22px; font:.8rem system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+  nav a:hover { color:var(--gold); }
+  .hero { min-height:min(80vh,620px); display:grid; place-items:center; text-align:center; padding:10vh 6vw; color:#fff;
+    background: linear-gradient(180deg,rgba(28,23,21,.45),rgba(28,23,21,.78)), url(img/hero.jpg) center/cover; }
+  .hero .est { font:.8rem system-ui, sans-serif; letter-spacing:.35em; text-transform:uppercase; color:var(--gold); }
+  .hero h1 { font-size:clamp(2.8rem,9vw,6rem); font-weight:400; line-height:1.02; margin:12px 0 10px; text-shadow:0 2px 18px rgba(0,0,0,.5); }
+  .hero p { max-width:36rem; margin:0 auto 30px; font-size:1.2rem; }
+  .btn { display:inline-block; padding:14px 30px; background:var(--red); color:#fff; text-decoration:none; font:.85rem/1 system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; border:2px solid var(--red); }
+  .btn.alt { background:transparent; border-color:#fff; margin-left:10px; }
+  section { padding:9vh 6vw; max-width:1100px; margin:auto; }
+  h2 { font-weight:400; font-size:2.1rem; }
+  .rule { width:60px; height:4px; background:var(--red); margin:10px 0 28px; }
+  .story { display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; }
+  .story img { width:100%; border:8px solid #fff; box-shadow:0 10px 26px rgba(0,0,0,.18); transform:rotate(1.5deg); }
+  .story p + p { margin-top:14px; }
+  .facts { background:var(--ink); color:var(--cream); }
+  .facts .row { max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; padding:34px 6vw; text-align:center; }
+  .facts b { display:block; font-size:2.2rem; font-weight:400; color:var(--gold); }
+  .facts span { font:.78rem system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
+  .card { background:var(--paper); border:1px solid var(--line); overflow:hidden; }
+  .card img { width:100%; height:190px; object-fit:cover; display:block; }
+  .card .t { padding:20px 22px 24px; }
+  .card h3 { font-weight:400; font-size:1.3rem; }
+  .card small { font:.72rem system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--red); }
+  .card p { font-size:.95rem; margin-top:6px; }
+  .cuban { background:var(--paper); border:2px solid var(--ink); padding:34px; margin-top:28px; }
+  .cuban h3 { font-weight:400; font-size:1.5rem; color:var(--red); }
+  .cuban ul { margin:12px 0 0 20px; }
+  table { width:100%; border-collapse:collapse; font-family:system-ui, sans-serif; }
+  td { padding:10px 0; border-bottom:1px solid var(--line); }
+  td:last-child { text-align:right; font-weight:600; }
+  .closed { color:var(--red); }
+  .info { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+  iframe.map { width:100%; min-height:300px; border:0; }
+  footer { background:var(--ink); color:var(--cream); text-align:center; padding:36px 6vw; font:.85rem system-ui, sans-serif; border-top:4px solid var(--red); }
+  footer small { opacity:.7; }
+  @media (max-width:760px) { .story, .info { grid-template-columns:1fr; } nav a { margin-left:12px; } }
+
+  html, body { overflow-x:hidden; }
+  img, iframe { max-width:100%; }
+  @media (max-width:640px) {
+    .note { font-size:.7rem; padding:6px 10px; }
+    header { flex-direction:column; gap:8px; padding:12px 5vw; position:static; }
+    nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; }
+    nav a { margin:0; font-size:.72rem; }
+    .hero { min-height:0 !important; padding:40px 6vw !important; }
+    .hero h1 { font-size:2.2rem !important; line-height:1.1; }
+    .hero p { font-size:1rem !important; }
+    .btn { display:block; margin:10px auto 0 !important; max-width:260px; text-align:center; }
+    .btn.alt { margin-left:auto !important; }
+    section { padding:44px 6vw !important; }
+    h2 { font-size:1.6rem; }
+    .story, .info, .castle { grid-template-columns:1fr !important; gap:24px !important; }
+    .castle { padding:26px !important; }
+    .cards, .grid { grid-template-columns:1fr !important; }
+    .facts .row { grid-template-columns:1fr 1fr !important; padding:24px 5vw; gap:14px; }
+    .facts b { font-size:1.5rem; }
+    .cuban { padding:22px; }
+    .rating { flex-direction:column; text-align:center; padding:22px; }
+    td { font-size:.9rem; vertical-align:top; }
+    iframe.map { min-height:240px; height:240px; }
+  }
+</style>
+</head>
+<body>
+<div class="note">Design concept only. Photos are stock placeholders, and wording is drawn from public news coverage, pending the owner's own photos, menu and approval.</div>
+
+<header>
+  <div class="logo">Silver <b>Ring</b> Cafe<small>RIVERVIEW, FLORIDA</small></div>
+  <nav><a href="#story">Our Story</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="est">Ybor City tradition &middot; Since 1947</div>
+    <h1>The Cuban sandwich,<br>the way it was made.</h1>
+    <p>Fresh Cuban bread from Ybor City, roasted pork, smoked ham, Swiss and pickles. Pressed hot, never changed.</p>
+    <a class="btn" href="#visit">Find us</a><a class="btn alt" href="#menu">See the menu</a>
+  </div>
+</div>
+
+<div class="facts"><div class="row">
+  <div><b>1947</b><span>Founded in Ybor City</span></div>
+  <div><b>1994</b><span>Riverview family-owned</span></div>
+  <div><b>2001</b><span>At 7419 US-301</span></div>
+  <div><b>Mon to Sat</b><span>10 AM to 4 PM</span></div>
+</div></div>
+
+<section id="story">
+  <div class="story">
+    <div>
+      <h2>A piece of Tampa history, in Riverview</h2><div class="rule"></div>
+      <p>Silver Ring began in 1947 in Ybor City, when Angelo Cacciatore, a boxing fan, named his cafe for the ring. His Cuban sandwich became a Tampa Bay landmark and has stayed the same ever since.</p>
+      <p>Dana Neville and her mother bought the Riverview cafe in 1994, and Dana has run it for more than thirty years. Every morning she drives to Ybor City for fresh Cuban bread, and the meats come from the family that has supplied Silver Ring since the 1950s.</p>
+    </div>
+    <img src="img/bread.jpg" alt="Cuban bread baking">
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <h2>From the counter</h2><div class="rule"></div>
+  <div class="cards">
+    <div class="card"><img src="img/deli.jpg" alt="Pressed Cuban sandwich"><div class="t"><small>The classic</small><h3>Silver Ring Cuban</h3><p>Smoked ham, roasted pork, Genoa salami, Swiss, pickles. Mustard, mayo or secret sauce. Pressed.</p></div></div>
+    <div class="card"><img src="img/crab.jpg" alt="Deviled crabs"><div class="t"><small>Hand rolled</small><h3>Deviled crabs</h3><p>Rolled by hand in Ruskin and delivered to the cafe twice a week.</p></div></div>
+    <div class="card"><img src="img/sandwiches.jpg" alt="Sandwiches at the counter"><div class="t"><small>Every day</small><h3>Deli sandwiches, soups and black beans</h3><p>Homemade soups, black beans and daily specials. Placeholder: owner to supply the full menu and prices.</p></div></div>
+  </div>
+  <div class="cuban">
+    <h3>Why it tastes right</h3>
+    <ul>
+      <li>Cuban bread picked up fresh from Ybor City each morning</li>
+      <li>Meats from the same family supplier for decades</li>
+      <li>No bacon, no ranch, no honey mustard. Just the recipe.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit">
+  <h2>Visit</h2><div class="rule"></div>
+  <div class="info">
+    <div>
+      <table>
+        <tr><td>Monday to Saturday</td><td>10:00 AM to 4:00 PM</td></tr>
+        <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+        <tr><td>Address</td><td>7419 US-301 S, Riverview, FL 33578</td></tr>
+        <tr><td>Phone</td><td>(813) 677-1487</td></tr>
+      </table>
+      <br><p>Large orders and party platters: call ahead, the lunch rush fills up quickly. Follow <b>Silver Ring (Riverview)</b> on Facebook for daily specials.</p><br>
+      <a class="btn" href="tel:+18136771487">Call the cafe</a>
+    </div>
+    <iframe class="map" title="Map" loading="lazy" src="https://www.google.com/maps?q=7419+US-301+S,+Riverview,+FL+33578&amp;z=16&amp;output=embed"></iframe>
+  </div>
+</section>
+
+<footer>Silver Ring Cafe, Riverview, Florida. Website concept by Dylan.<br><small>Stock photos from Wikimedia Commons (CC BY, CC BY-SA), placeholders until the owner supplies her own. Background drawn from Tampa Bay news coverage.</small></footer>
+</body>
+</html>

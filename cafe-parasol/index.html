@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe Parasol | Makishi, Naha</title>
+<style>
+  :root { --cream:#fbf5ea; --ink:#2b2420; --coral:#e2674a; --sea:#2f8f9d; --sand:#efe3cf; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family: Georgia, "Times New Roman", serif; background:var(--cream); color:var(--ink); line-height:1.6; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:18px 6vw; position:sticky; top:0; background:rgba(251,245,234,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--sand); }
+  .logo { font-size:1.4rem; letter-spacing:.04em; }
+  .logo span { color:var(--coral); }
+  nav a { margin-left:24px; color:var(--ink); text-decoration:none; font:.85rem/1 system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+  nav a:hover { color:var(--coral); }
+  .hero { min-height:78vh; display:grid; place-items:center; text-align:center; padding:8vh 6vw;
+    background: linear-gradient(180deg,rgba(43,36,32,.35),rgba(43,36,32,.65)), url(img/hero.jpg) center/cover; color:#fff; }
+  .hero h1 { font-size:clamp(2.6rem,8vw,5.5rem); font-weight:400; letter-spacing:.02em; text-shadow:0 2px 18px rgba(0,0,0,.4); }
+  .hero p { max-width:34rem; margin:18px auto 30px; font-size:1.15rem; text-shadow:0 1px 10px rgba(0,0,0,.4); }
+  .hero .btn.alt { color:#fff; border-color:#fff; }
+  .card { padding:0 !important; overflow:hidden; }
+  .card img { width:100%; height:170px; object-fit:cover; display:block; }
+  .card .txt { padding:20px 22px 24px; }
+  iframe.map { width:100%; height:300px; border:0; border-radius:14px; }
+  .btn { display:inline-block; padding:14px 30px; border-radius:999px; background:var(--coral); color:#fff; text-decoration:none; font:.9rem/1 system-ui, sans-serif; letter-spacing:.1em; text-transform:uppercase; }
+  .btn.alt { background:transparent; color:var(--ink); border:1px solid var(--ink); margin-left:10px; }
+  section { padding:9vh 6vw; max-width:1100px; margin:auto; }
+  h2 { font-weight:400; font-size:2rem; margin-bottom:8px; }
+  .rule { width:48px; height:3px; background:var(--coral); margin-bottom:28px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; }
+  .card { background:#fff; border:1px solid var(--sand); border-radius:14px; padding:26px; }
+  .card h3 { font-weight:400; font-size:1.2rem; margin-bottom:6px; }
+  .card small { font:.8rem system-ui, sans-serif; color:#8a7b6c; letter-spacing:.08em; text-transform:uppercase; }
+  .rating { display:flex; gap:18px; align-items:center; background:var(--sea); color:#fff; border-radius:14px; padding:26px 30px; }
+  .rating b { font-size:3rem; font-weight:400; }
+  table { width:100%; border-collapse:collapse; font-family:system-ui, sans-serif; }
+  td { padding:10px 0; border-bottom:1px solid var(--sand); }
+  td:last-child { text-align:right; }
+  .closed { color:var(--coral); }
+  .map { height:260px; border-radius:14px; background:repeating-linear-gradient(45deg,var(--sand),var(--sand) 12px,#f6ecd9 12px,#f6ecd9 24px); display:grid; place-items:center; font:.9rem system-ui, sans-serif; color:#8a7b6c; }
+  footer { background:var(--ink); color:var(--cream); text-align:center; padding:36px 6vw; font:.85rem system-ui, sans-serif; }
+  .note { background:#fff3c4; color:#5b4a00; text-align:center; font:.8rem system-ui, sans-serif; padding:8px; }
+
+  html, body { overflow-x:hidden; }
+  img, iframe { max-width:100%; }
+  @media (max-width:640px) {
+    .note { font-size:.7rem; padding:6px 10px; }
+    header { flex-direction:column; gap:8px; padding:12px 5vw; position:static; }
+    nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; }
+    nav a { margin:0; font-size:.72rem; }
+    .hero { min-height:0 !important; padding:40px 6vw !important; }
+    .hero h1 { font-size:2.2rem !important; line-height:1.1; }
+    .hero p { font-size:1rem !important; }
+    .btn { display:block; margin:10px auto 0 !important; max-width:260px; text-align:center; }
+    .btn.alt { margin-left:auto !important; }
+    section { padding:44px 6vw !important; }
+    h2 { font-size:1.6rem; }
+    .story, .info, .castle { grid-template-columns:1fr !important; gap:24px !important; }
+    .castle { padding:26px !important; }
+    .cards, .grid { grid-template-columns:1fr !important; }
+    .facts .row { grid-template-columns:1fr 1fr !important; padding:24px 5vw; gap:14px; }
+    .facts b { font-size:1.5rem; }
+    .cuban { padding:22px; }
+    .rating { flex-direction:column; text-align:center; padding:22px; }
+    td { font-size:.9rem; vertical-align:top; }
+    iframe.map { min-height:240px; height:240px; }
+  }
+</style>
+</head>
+<body>
+<div class="note">Design concept only. Wording and stock photos are placeholders pending the owner's input.</div>
+<header>
+  <div class="logo">Cafe <span>Parasol</span></div>
+  <nav><a href="#menu">Menu</a><a href="#hours">Hours</a><a href="#visit">Visit</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Cafe Parasol</h1>
+    <p>A small coffee shop in Makishi, Naha. Slow mornings, good coffee, and a seat out of the sun.</p>
+    <a class="btn" href="#visit">Find us</a><a class="btn alt" href="#menu">See the menu</a>
+  </div>
+</div>
+
+<section id="menu">
+  <h2>Menu</h2><div class="rule"></div>
+  <div class="cards">
+    <div class="card"><img src="img/coffee.jpg" alt="Latte"><div class="txt"><small>Coffee</small><h3>House blend</h3><p>Placeholder description. Owner to supply.</p></div></div>
+    <div class="card"><img src="img/cake.jpg" alt="Slice of cake"><div class="txt"><small>Sweets</small><h3>Daily cake</h3><p>Placeholder description. Owner to supply.</p></div></div>
+    <div class="card"><img src="img/lunch.jpg" alt="Light lunch"><div class="txt"><small>Light meals</small><h3>Lunch plate</h3><p>Placeholder description. Owner to supply.</p></div></div>
+    <div class="card"><img src="img/drink.jpg" alt="Cold drink"><div class="txt"><small>Cold drinks</small><h3>Seasonal drink</h3><p>Placeholder description. Owner to supply.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="rating"><b>4.9</b><div>Rated by 130 guests on Google.<br>Naha's favourite small corner for coffee.</div></div>
+</section>
+
+<section id="hours">
+  <h2>Hours</h2><div class="rule"></div>
+  <table>
+    <tr><td>Monday to Saturday</td><td>10:00 to 18:00</td></tr>
+    <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+  </table>
+</section>
+
+<section id="visit">
+  <h2>Visit</h2><div class="rule"></div>
+  <p>3 Chome-3-1 Makishi, Naha, Okinawa 900-0013<br>Parasol Street, Garb River Central Shopping Arcade<br>Phone: 070-5553-4481 &middot; Cash and QR payments</p><br>
+  <iframe class="map" title="Map" loading="lazy" src="https://www.google.com/maps?q=26.214389,127.68869&amp;z=17&amp;output=embed"></iframe>
+</section>
+
+<footer>Cafe Parasol, Makishi, Naha. Website concept by Dylan.<br><small>Stock photos from Wikimedia Commons (CC0, CC BY-SA), placeholders until the owner supplies her own.</small></footer>
+</body>
+</html>

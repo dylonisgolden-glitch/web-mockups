@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shuri Cafe Roots | 首里Cafe Roots</title>
+<style>
+  :root { --banana:#f6d65a; --leaf:#2f7d4f; --deep:#1f3d2b; --cream:#fffaf0; --coral:#ef7a52; --ink:#26302a; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; background:var(--cream); color:var(--ink); line-height:1.65; }
+  .note { background:#fff3c4; color:#5b4a00; text-align:center; font-size:.8rem; padding:8px; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:16px 6vw; background:var(--deep); color:var(--cream); position:sticky; top:0; z-index:5; }
+  .logo { font-size:1.25rem; font-weight:700; letter-spacing:.03em; }
+  .logo small { display:block; font-size:.7rem; font-weight:400; opacity:.75; letter-spacing:.12em; }
+  nav a { color:var(--cream); text-decoration:none; margin-left:20px; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; }
+  nav a:hover { color:var(--banana); }
+  .hero { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:4vw; padding:9vh 6vw; background:linear-gradient(135deg,var(--banana),#ffe9a1 55%,var(--cream)); }
+  .hero h1 { font-size:clamp(2.2rem,6vw,4.2rem); line-height:1.08; color:var(--deep); }
+  .hero h1 span { color:var(--coral); }
+  .hero p { margin:18px 0 28px; max-width:30rem; font-size:1.1rem; }
+  .btn { display:inline-block; padding:14px 28px; border-radius:999px; background:var(--deep); color:var(--cream); text-decoration:none; font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; }
+  .btn.alt { background:transparent; color:var(--deep); border:2px solid var(--deep); margin-left:8px; }
+  .hero img { width:100%; height:auto; max-height:460px; object-fit:cover; border-radius:26px; box-shadow:0 18px 30px rgba(31,61,43,.28); }
+  .card img { width:100%; height:170px; object-fit:cover; display:block; }
+  .castle img { width:100%; height:auto; border-radius:14px; }
+  iframe.map { width:100%; min-height:260px; border:0; border-radius:18px; }
+  section { padding:9vh 6vw; max-width:1100px; margin:auto; }
+  h2 { font-size:2rem; color:var(--deep); }
+  .bar { width:54px; height:4px; background:var(--coral); border-radius:4px; margin:10px 0 28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; }
+  .card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(31,61,43,.09); }
+  .card svg { width:100%; height:170px; display:block; }
+  .card div { padding:18px 20px 22px; }
+  .card h3 { font-size:1.1rem; color:var(--deep); }
+  .card p { font-size:.92rem; opacity:.85; }
+  .card .jp { font-size:.8rem; color:var(--leaf); letter-spacing:.08em; }
+  .castle { background:var(--deep); color:var(--cream); border-radius:22px; padding:44px; display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; }
+  .castle h2 { color:var(--banana); }
+  .castle svg { width:100%; height:auto; }
+  .info { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+  .info table { width:100%; border-collapse:collapse; }
+  .info td { padding:9px 0; border-bottom:1px solid #eadfbf; }
+  .info td:last-child { text-align:right; font-weight:600; }
+  .map { min-height:230px; border-radius:18px; background:repeating-linear-gradient(45deg,#f2e8c8,#f2e8c8 12px,#f8f0d7 12px,#f8f0d7 24px); display:grid; place-items:center; color:#8a7b50; font-size:.9rem; }
+  footer { background:var(--deep); color:var(--cream); text-align:center; padding:34px 6vw; font-size:.85rem; }
+  @media (max-width:760px) { .hero, .castle, .info { grid-template-columns:1fr; } nav a { margin-left:12px; } }
+
+  html, body { overflow-x:hidden; }
+  img, iframe { max-width:100%; }
+  @media (max-width:640px) {
+    .note { font-size:.7rem; padding:6px 10px; }
+    header { flex-direction:column; gap:8px; padding:12px 5vw; position:static; }
+    nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; }
+    nav a { margin:0; font-size:.72rem; }
+    .hero { min-height:0 !important; padding:40px 6vw !important; }
+    .hero h1 { font-size:2.2rem !important; line-height:1.1; }
+    .hero p { font-size:1rem !important; }
+    .btn { display:block; margin:10px auto 0 !important; max-width:260px; text-align:center; }
+    .btn.alt { margin-left:auto !important; }
+    section { padding:44px 6vw !important; }
+    h2 { font-size:1.6rem; }
+    .story, .info, .castle { grid-template-columns:1fr !important; gap:24px !important; }
+    .castle { padding:26px !important; }
+    .cards, .grid { grid-template-columns:1fr !important; }
+    .facts .row { grid-template-columns:1fr 1fr !important; padding:24px 5vw; gap:14px; }
+    .facts b { font-size:1.5rem; }
+    .cuban { padding:22px; }
+    .rating { flex-direction:column; text-align:center; padding:22px; }
+    td { font-size:.9rem; vertical-align:top; }
+    iframe.map { min-height:240px; height:240px; }
+  }
+</style>
+</head>
+<body>
+<div class="note">Design concept only. Stock photos, wording and menu items are placeholders pending the owner's own photos and text.</div>
+
+<header>
+  <div class="logo">Shuri Cafe Roots<small>首里Cafe Roots</small></div>
+  <nav><a href="#menu">Menu</a><a href="#castle">Shuri</a><a href="#visit">Visit</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Thick banana juice,<br><span>Okinawan fruit,</span><br>a short walk from Shuri Castle.</h1>
+    <p>首里城のそばで、濃厚バナナジュースと沖縄県産フルーツジュースを。<br>Rich banana juice and fresh Okinawa-grown fruit juice, made to order.</p>
+    <a class="btn" href="#visit">Find us</a><a class="btn alt" href="#menu">Menu</a>
+  </div>
+  <img src="img/banana.jpg" alt="Banana juice">
+</div>
+
+<section id="menu">
+  <h2>Menu</h2><div class="bar"></div>
+  <div class="grid">
+    <div class="card">
+      <img src="img/banana.jpg" alt="Banana juice">
+      <div><span class="jp">濃厚バナナジュース</span><h3>Thick Banana Juice</h3><p>Rich, creamy and blended fresh. Placeholder description.</p></div>
+    </div>
+    <div class="card">
+      <img src="img/range.jpg" alt="Fruit juices">
+      <div><span class="jp">県産フルーツジュース</span><h3>Okinawa Fruit Juice</h3><p>Seasonal local fruit, pressed to order. Placeholder description.</p></div>
+    </div>
+    <div class="card">
+      <img src="img/kiwi.jpg" alt="Fruit smoothie">
+      <div><span class="jp">季節のジュース</span><h3>Seasonal Special</h3><p>Changes with the harvest. Placeholder description.</p></div>
+    </div>
+    <div class="card">
+      <img src="img/coffee.jpg" alt="Latte">
+      <div><span class="jp">コーヒー</span><h3>Coffee</h3><p>Placeholder item. Owner to confirm the full list.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="castle">
+  <div class="castle">
+    <div>
+      <h2>Right by Shuri</h2>
+      <p>After the castle grounds, stop in for something cold. About a six minute walk from Shuri Castle, on Ryutan street.</p><br>
+      <p>首里城観光の合間に、ひと休みはいかがですか。</p>
+    </div>
+    <div><img src="img/castle.jpg" alt="Shuri Castle"><small style="opacity:.7">Photo: CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)</small></div>
+  </div>
+</section>
+
+<section id="visit">
+  <h2>Visit</h2><div class="bar"></div>
+  <div class="info">
+    <div>
+      <table>
+        <tr><td>Hours</td><td>11:00 to 18:00</td></tr>
+        <tr><td>Closed</td><td>Irregular, check Instagram</td></tr>
+        <tr><td>Address</td><td>2-11-8 Shuritonokuracho, Naha</td></tr>
+        <tr><td>Floor</td><td>1F</td></tr>
+        <tr><td>Postcode</td><td>903-0812</td></tr>
+      </table>
+      <br><p>Follow <b>@roots_shuricafe_okinawa</b> on Instagram.</p>
+    </div>
+    <iframe class="map" title="Map" loading="lazy" src="https://www.google.com/maps?q=%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E9%A6%96%E9%87%8C%E5%BD%93%E8%94%B5%E7%94%BA2-11-8&amp;z=17&amp;output=embed"></iframe>
+  </div>
+</section>
+
+<footer>Shuri Cafe Roots, Shuri, Naha. Website concept by Dylan.<br><small>Stock photos from Wikimedia Commons (CC0, CC BY-SA), placeholders until the owner supplies her own.</small></footer>
+</body>
+</html>
