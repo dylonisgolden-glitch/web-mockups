@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maganda Cuisine | Filipino Food in Brandon, Florida</title>
+<style>
+  :root { --sun:#f6b81c; --blue:#14397a; --red:#cf2e3a; --cream:#fff8e8; --ink:#1d2433; --line:#f0e2bd; }
+  * { box-sizing:border-box; margin:0; }
+  html, body { overflow-x:hidden; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; background:var(--cream); color:var(--ink); line-height:1.65; }
+  img, iframe { max-width:100%; }
+  .note { background:#fff3c4; color:#5b4a00; text-align:center; font-size:.8rem; padding:8px; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:16px 6vw; background:var(--blue); color:#fff; position:sticky; top:0; z-index:5; border-bottom:4px solid var(--sun); }
+  .logo { font-size:1.3rem; font-weight:700; letter-spacing:.03em; }
+  .logo small { display:block; font-size:.68rem; font-weight:400; letter-spacing:.2em; opacity:.8; }
+  nav a { color:#fff; text-decoration:none; margin-left:20px; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; }
+  nav a:hover { color:var(--sun); }
+  .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:4vw; align-items:center; padding:9vh 6vw; background:linear-gradient(135deg,var(--sun),#ffd96b 60%,var(--cream)); }
+  .hero .tag { font-size:.8rem; letter-spacing:.3em; text-transform:uppercase; color:var(--red); font-weight:700; }
+  .hero h1 { font-size:clamp(2.4rem,6vw,4.4rem); line-height:1.05; color:var(--blue); margin:8px 0 14px; }
+  .hero p { max-width:30rem; font-size:1.1rem; margin-bottom:26px; }
+  .btn { display:inline-block; padding:14px 28px; border-radius:999px; background:var(--red); color:#fff; text-decoration:none; font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; font-weight:600; }
+  .btn.alt { background:transparent; color:var(--blue); border:2px solid var(--blue); margin-left:8px; }
+  .hero img { width:100%; border-radius:26px; box-shadow:0 18px 30px rgba(20,57,122,.3); aspect-ratio:4/3; object-fit:cover; }
+  .strip { background:var(--blue); color:#fff; }
+  .strip .row { max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px; padding:30px 6vw; text-align:center; }
+  .strip b { display:block; font-size:1.8rem; color:var(--sun); font-weight:700; }
+  .strip span { font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; opacity:.85; }
+  section { padding:9vh 6vw; max-width:1100px; margin:auto; }
+  h2 { font-size:2rem; color:var(--blue); }
+  .bar { width:56px; height:5px; background:var(--red); border-radius:4px; margin:10px 0 28px; }
+  .story { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+  .story p + p { margin-top:14px; }
+  .story img { width:100%; border-radius:20px; box-shadow:0 12px 26px rgba(0,0,0,.15); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; }
+  .card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(20,57,122,.1); }
+  .card img { width:100%; height:180px; object-fit:cover; display:block; }
+  .card div { padding:18px 20px 22px; }
+  .card h3 { font-size:1.15rem; color:var(--blue); }
+  .card small { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--red); font-weight:700; }
+  .card p { font-size:.93rem; opacity:.85; }
+  .more { margin-top:24px; background:#fff; border:2px dashed var(--sun); border-radius:16px; padding:22px 26px; }
+  .more b { color:var(--blue); }
+  .info { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:9px 0; border-bottom:1px solid var(--line); }
+  td:last-child { text-align:right; font-weight:600; }
+  .closed { color:var(--red); }
+  iframe.map { width:100%; min-height:300px; border:0; border-radius:18px; }
+  footer { background:var(--blue); color:#fff; text-align:center; padding:34px 6vw; font-size:.85rem; border-top:4px solid var(--sun); }
+  footer small { opacity:.75; }
+  @media (max-width:760px) {
+    .note { font-size:.7rem; padding:6px 10px; }
+    header { flex-direction:column; gap:8px; padding:12px 5vw; position:static; }
+    nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; }
+    nav a { margin:0; font-size:.72rem; }
+    .hero, .story, .info { grid-template-columns:1fr; gap:24px; }
+    .hero { padding:40px 6vw; }
+    .hero h1 { font-size:2.3rem; }
+    .btn { display:block; margin:10px auto 0; max-width:260px; text-align:center; }
+    .btn.alt { margin-left:auto; }
+    section { padding:44px 6vw; }
+    h2 { font-size:1.6rem; }
+    .grid { grid-template-columns:1fr; }
+    .strip .row { grid-template-columns:1fr 1fr; padding:22px 5vw; }
+    .strip b { font-size:1.4rem; }
+    iframe.map { min-height:240px; height:240px; }
+  }
+</style>
+</head>
+<body>
+<div class="note">Design concept only. Photos are stock placeholders, and wording is drawn from public listings, pending the owners' own photos, menu and approval.</div>
+
+<header>
+  <div class="logo">Maganda Cuisine<small>FILIPINO FOOD &middot; BRANDON</small></div>
+  <nav><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#visit">Visit</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="tag">Maganda &middot; Beautiful</div>
+    <h1>Filipino comfort food, cooked like home.</h1>
+    <p>Lumpia, pancit, adobo and sisig, served from our family's food truck in Brandon. Thursday to Sunday, noon to seven.</p>
+    <a class="btn" href="#visit">Find the truck</a><a class="btn alt" href="#menu">See the menu</a>
+  </div>
+  <img src="img/pancit.jpg" alt="Pancit bihon">
+</div>
+
+<div class="strip"><div class="row">
+  <div><b>4.6</b><span>Rating from 115 Google reviews</span></div>
+  <div><b>2024</b><span>Family food truck since</span></div>
+  <div><b>Thu to Sun</b><span>12 PM to 7 PM</span></div>
+  <div><b>Subic</b><span>Flavors of Zambales</span></div>
+</div></div>
+
+<section id="story">
+  <div class="story">
+    <div>
+      <h2>From a family kitchen in Subic</h2><div class="bar"></div>
+      <p>Maganda Cuisine began in February 2024 from our family's love for Filipino food and the flavors of home in Subic, Zambales. What started as cooking for friends became a food truck.</p>
+      <p>For us, cooking is a skill learned by heart, through family and tradition. We are proud to share a taste of our culture and bring comfort in every meal.</p>
+    </div>
+    <img src="img/lumpia.jpg" alt="Lumpia Shanghai">
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <h2>From the truck</h2><div class="bar"></div>
+  <div class="grid">
+    <div class="card"><img src="img/lumpia.jpg" alt="Lumpia"><div><small>Crowd favorite</small><h3>Lumpia Shanghai</h3><p>Crispy fried rolls of seasoned pork and vegetables, with sweet and sour sauce.</p></div></div>
+    <div class="card"><img src="img/pancit.jpg" alt="Pancit bihon"><div><small>Noodles</small><h3>Pancit Bihon</h3><p>Stir-fried rice noodles with chicken and vegetables.</p></div></div>
+    <div class="card"><img src="img/adobo.jpg" alt="Chicken adobo"><div><small>Comfort classic</small><h3>Chicken and Pork Adobo</h3><p>Slow-cooked in soy and vinegar until the meat falls off the bone.</p></div></div>
+    <div class="card"><img src="img/sisig.jpg" alt="Pork sisig"><div><small>Sizzling</small><h3>Pork Sisig</h3><p>Chopped, seasoned pork served with rice.</p></div></div>
+  </div>
+  <div class="more"><b>Also on the menu:</b> Bistek, Dinuguan, Filipino pork BBQ, Siomai and Halo-Halo. Placeholder: owners to supply the full menu and prices.</div>
+</section>
+
+<section id="visit">
+  <h2>Visit</h2><div class="bar"></div>
+  <div class="info">
+    <div>
+      <table>
+        <tr><td>Thursday to Sunday</td><td>12:00 PM to 7:00 PM</td></tr>
+        <tr><td>Monday to Wednesday</td><td class="closed">Closed</td></tr>
+        <tr><td>Address</td><td>112 Pauls Dr, Brandon, FL 33511</td></tr>
+        <tr><td>Phone</td><td>(813) 486-8825</td></tr>
+      </table>
+      <br><p>Right by BOM Asian Supermarket. Follow Maganda Cuisine on Facebook for daily specials.</p><br>
+      <a class="btn" href="tel:+18134868825">Call the truck</a>
+    </div>
+    <iframe class="map" title="Map" loading="lazy" src="https://www.google.com/maps?q=112+Pauls+Dr,+Brandon,+FL+33511&amp;z=16&amp;output=embed"></iframe>
+  </div>
+</section>
+
+<footer>Maganda Cuisine, Brandon, Florida. Website concept by Dylon.<br><small>Stock photos from Wikimedia Commons (CC0, CC BY, CC BY-SA), placeholders until the owners supply their own. Story drawn from public listings.</small></footer>
+</body>
+</html>
